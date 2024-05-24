@@ -32,8 +32,8 @@ I have used AWS Glue to run spark jobs for processing the data into the differen
 Below are the scripts used for ETL on Glue:
 My data lakehouse solution is comprised of five Python scripts which are run in AWS Glue. The scripts are run in the following order:
 
-Customer_Landing_to_Trusted.py: This script transfers customer data from the 'landing' to 'trusted' zones. It filters for customers who have agreed to share data with researchers.
-Accelerometer_Landing_to_Trusted.py: This script transfers accelerometer data from the 'landing' to 'trusted' zones. It filters for Accelerometer readings from customers who have agreed to share data with researchers.
-Customer_Trusted_to_Curated.py: This script transfers customer data from the 'trusted' to 'curated' zones. It filters for customers with Accelerometer readings and have agreed to share data with researchers.
-Step_Trainer_Landing_to_Curated.py: This script transfers step trainer data from the 'landing' to 'curated' zones. It filters for curated customers with Step Trainer readings.
-Machine_Learning_Curated.py: This script combines Step Trainer and Accelerometer data from the 'curated' zone into a single table to train a machine learning model.
+1. Customer_Landing_to_Trusted.py: Script transfers customer data from the landing to trusted zones. It filters for customers who have agreed to share data with researchers.
+2. Accelerometer_Landing_to_Trusted.py: script transfers accelerometer data from the landing to trusted zones. It filters for Accelerometer readings from customers who have agreed to share data with researchers.
+3. Customer_Trusted_to_Curated.py: Script transfers customer data from the trusted to curated zones. It filters for customers with Accelerometer readings and have agreed to share data with researchers.
+4. Step_Trainer_Landing_to_trusted.py: This script transfers step trainer data from the landing to trusted zones. It filters for curated customers with Step Trainer readings.
+5. Machine_Learning_Curated.py: This script combines Step Trainer from trusted zone and Accelerometer data from the trusted zone into a single table to train a machine learning model.
